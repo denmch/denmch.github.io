@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Den McHenry</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Feb 2018 20:09:50 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Feb 2018 11:38:30 -0800</lastBuildDate>
     
 	<atom:link href="https://denm.ch/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using the Wordnik API</title>
+      <link>https://denm.ch/posts/wordnik-api/</link>
+      <pubDate>Tue, 20 Feb 2018 11:38:30 -0800</pubDate>
+      
+      <guid>https://denm.ch/posts/wordnik-api/</guid>
+      <description>One thing I&amp;rsquo;ve finally learned is that whether you&amp;rsquo;re running bash or zsh in your terminal, the file where you customize your instance ends with rc, which stands for &amp;ldquo;runcom,&amp;rdquo; or &amp;ldquo;run commands,&amp;rdquo; dating way back to 1965 in the early days of UNIX. .bashrc is the file that contains commands to be run when the bourne again shell (bash) starts up, and .zshrc has the commands to be run when the z shell (zsh) starts up.</description>
+    </item>
     
     <item>
       <title>Ch-Ch-Changes</title>
