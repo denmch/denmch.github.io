@@ -49,7 +49,7 @@
 
 <meta itemprop="datePublished" content="2018-02-20T11:38:30-08:00" />
 <meta itemprop="dateModified" content="2018-02-20T11:38:30-08:00" />
-<meta itemprop="wordCount" content="345">
+<meta itemprop="wordCount" content="380">
 
 
 
@@ -177,9 +177,11 @@
         <div class="nested-copy-line-height lh-copy f4 nested-links nested-img dark-gray">
              <p>One thing I&rsquo;ve finally learned is that whether you&rsquo;re running bash or zsh in your terminal, the file where you customize your instance ends with <code>rc</code>, which stands for &ldquo;runcom,&rdquo; or &ldquo;run commands,&rdquo; dating way back to 1965 in the early days of UNIX. <code>.bashrc</code> is the file that contains commands to be run when the bourne again shell (bash) starts up, and <code>.zshrc</code> has the commands to be run when the z shell (zsh) starts up. And you&rsquo;ll find it elsewhere, for example in <code>.vimrc</code>  if you&rsquo;re into Vim.</p>
 
-<p>One of the really cool things you can do here is reference environment variables, aliases, and functions stored in external files. So I wrote the following function using the Wordnik API so I can quickly define words on the command line.</p>
+<p>One of the really cool things you can do here is reference environment variables, aliases, and functions stored in external files. So I wrote the following function using the <a href="http://developer.wordnik.com/" target="_blank">Wordnik API</a> so I can quickly define words on the command line.</p>
 
 <script src="https://gist.github.com/denmch/f7d9b8e0f01b2ab67ec633ccc9799f9f.js"></script>
+
+<p>If you don&rsquo;t know <a href="http://wordnik.com/" target="_blank">Wordnik</a>, you should check it out. It&rsquo;s a great site, and when my confirmation email didn&rsquo;t come through Erin McKean quickly responded herself and activted my account, which felt pretty cool.</p>
 
 <p>The function works like a shell command and can take an argument, which is represented within the function as <code>$@</code>.</p>
 
