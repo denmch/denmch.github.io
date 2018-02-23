@@ -49,7 +49,7 @@
 
 <meta itemprop="datePublished" content="2018-02-20T11:38:30-08:00" />
 <meta itemprop="dateModified" content="2018-02-20T11:38:30-08:00" />
-<meta itemprop="wordCount" content="594">
+<meta itemprop="wordCount" content="595">
 
 
 
@@ -183,7 +183,7 @@
 
 <p>If you don&rsquo;t know <a href="http://wordnik.com/" target="_blank">Wordnik</a>, you should check it out. It&rsquo;s a great site, and when my confirmation email didn&rsquo;t come through Erin McKean quickly responded herself and activated my account, which felt pretty cool.</p>
 
-<p>The function works like a shell command and can take an argument, which is represented within the function as <code>$@</code>. This grabs any and all positional parameters, e.g., if the command takes three parameters, they&rsquo;d be referenced as <code>$1</code>, <code>$2</code>, <code>$3</code>. So <code>$@</code> just takes one after the other and passes them all in. The local variables <code>array</code> and <code>string</code> it into a string and then replace the spaces between parameters with <code>%20</code> so that the result works within the url in <code>curl</code>.</p>
+<p>The function works like a shell command and can take an argument, which is represented within the function as <code>$@</code>. This grabs any and all positional parameters, e.g., if the command takes three parameters, they&rsquo;d be referenced as <code>$1</code>, <code>$2</code>, <code>$3</code>. So <code>$@</code> just takes one after the other and passes them all in. The local variables <code>params</code> and <code>params_encoded</code> turn it into a URL-encode string by replacing the spaces between parameters with <code>%20</code> so that the result work <code>curl</code> talks to the server.</p>
 
 <p>The <code>curl</code> command is one of those that you find all over the web in places like StackOverflow, where people say, &ldquo;Just type curl blah bitty blah blah.&rdquo; It&rsquo;s just one of those things that you use to do something. But as often happens, it turns out to be helpful to know what the name means, so that you can retain the meaning. In this case, its name is styled cURL, like the ubiquitous acronym URL. It&rsquo;s written in C and though originally meant to be pronounced &ldquo;see URL,&rdquo; it was later treated as a backronym for &ldquo;cURL URL Request Library,&rdquo; as the creator described on cURL&rsquo;s 17th birthday. (As of this writing cURL is nearing 20!)</p>
 
