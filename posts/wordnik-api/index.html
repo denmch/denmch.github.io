@@ -49,7 +49,7 @@
 
 <meta itemprop="datePublished" content="2018-02-20T11:38:30-08:00" />
 <meta itemprop="dateModified" content="2018-02-20T11:38:30-08:00" />
-<meta itemprop="wordCount" content="443">
+<meta itemprop="wordCount" content="594">
 
 
 
@@ -181,13 +181,17 @@
 
 <script src="https://gist.github.com/denmch/f7d9b8e0f01b2ab67ec633ccc9799f9f.js"></script>
 
-<p>If you don&rsquo;t know <a href="http://wordnik.com/" target="_blank">Wordnik</a>, you should check it out. It&rsquo;s a great site, and when my confirmation email didn&rsquo;t come through Erin McKean quickly responded herself and activted my account, which felt pretty cool.</p>
+<p>If you don&rsquo;t know <a href="http://wordnik.com/" target="_blank">Wordnik</a>, you should check it out. It&rsquo;s a great site, and when my confirmation email didn&rsquo;t come through Erin McKean quickly responded herself and activated my account, which felt pretty cool.</p>
 
 <p>The function works like a shell command and can take an argument, which is represented within the function as <code>$@</code>. This grabs any and all positional parameters, e.g., if the command takes three parameters, they&rsquo;d be referenced as <code>$1</code>, <code>$2</code>, <code>$3</code>. So <code>$@</code> just takes one after the other and passes them all in. The local variables <code>array</code> and <code>string</code> it into a string and then replace the spaces between parameters with <code>%20</code> so that the result works within the url in <code>curl</code>.</p>
 
+<p>The <code>curl</code> command is one of those that you find all over the web in places like StackOverflow, where people say, &ldquo;Just type curl blah bitty blah blah.&rdquo; It&rsquo;s just one of those things that you use to do something. But as often happens, it turns out to be helpful to know what the name means, so that you can retain the meaning. In this case, its name is styled cURL, like the ubiquitous acronym URL. It&rsquo;s written in C and though originally meant to be pronounced &ldquo;see URL,&rdquo; it was later treated as a backronym for &ldquo;cURL URL Request Library,&rdquo; as the creator described on cURL&rsquo;s 17th birthday. (As of this writing cURL is nearing 20!)</p>
+
+<p>Knowing that history we remember either that cURL allows us to &ldquo;see&rdquo; stuff at a given URL, or that it&rsquo;s a library written in C used to request information from and about URLs.</p>
+
 <p>We run <code>curl</code> with a <code>--silent</code> option. If you were typing this a lot on the command line, it&rsquo;d be faster to use <code>-s</code>, but for the purposes of a readable gist, it seems beneficial to type out the option, explaining clearly that we want our <code>curl</code> output to be silent, i.e., to not show us the progress bar, etc. To get a result, you need to add your Wordnik API key (I&rsquo;ve added mine as an environment variable sourced in my <code>.zshrc</code> file).</p>
 
-<p>We pipe the output through <code>json</code> with the <code>--array</code> option (aka <code>-a</code>), and the lookup <code>text</code>, which is the key that should grab each definition in the JSON results from Wordnik.</p>
+<p>We pipe the output through <code>json</code> with the <code>--array</code> option (aka <code>-a</code>), and the lookup parameter <code>text</code>, which is the key that should grab each definition in the JSON results from Wordnik.</p>
 
 <p>These results are then piped to <code>cat</code> with the <code>-b</code> option, which numbers non-blank lines in returned results. I&rsquo;m not sure the <code>-b</code> options is necessary given the results (<code>-n</code> could be sufficient), but it doesn&rsquo;t hurt.</p>
 
@@ -195,7 +199,7 @@
 
 <p><code>def learning | cowsay -f stegosaurus</code></p>
 
-<p><img src="/images/stegosaurus-def.png" alt="An screenshot of a termainal window showing ASCII art of a stegosaurus speaking three definitions of the word learning." /></p>
+<p><img src="/images/stegosaurus-def.png" alt="An screenshot of a terminal window showing ASCII art of a stegosaurus speaking three definitions of the word learning." /></p>
 
         </div>
     </article>
