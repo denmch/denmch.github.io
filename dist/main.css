@@ -5894,6 +5894,7 @@ pre {
 .codepen,
 .stackoverflow,
 .medium,
+.dev,
 .spotify,
 .dribbble {
     fill: #bababa;
@@ -5908,6 +5909,7 @@ pre {
 .codepen:hover,
 .stackoverflow:hover,
 .medium:hover,
+.dev:hover,
 .spotify:hover,
 .dribbble:hover {
     fill: #ffffff;
@@ -5986,7 +5988,7 @@ iframe {
 }
 
 mark {
-	background-color: #ffea9e;
+    background-color: #ffea9e;
 }
 
 code {
@@ -5997,4 +5999,33 @@ code {
 
 .gist .blob-code-inner {
     white-space: pre-wrap;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.78em;
+    margin: 0.8em 0 1.2em;
+    display: block;
+    table-layout: fixed
+}
+
+@media screen and (min-width: 500px) {
+    .table {
+        font-size: 0.9em
+    }
+}
+
+table th {
+    border: 1px solid #dbdbdb;
+    padding: 5px 1vw;
+    background: #f9f9fa;
+    text-align: left
+}
+
+table td {
+    border: 1px solid #dbdbdb;
+    padding: 5px 1vw;
+    width: 1000px;
+    box-sizing: border-box
 }
