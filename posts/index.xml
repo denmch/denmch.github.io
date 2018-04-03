@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Den McHenry</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Mar 2018 13:05:19 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 01 Apr 2018 20:06:21 -0700</lastBuildDate>
     
 	<atom:link href="https://denm.ch/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Relative URLs Desmystified</title>
+      <link>https://denm.ch/posts/relative-urls/</link>
+      <pubDate>Sun, 01 Apr 2018 20:06:21 -0700</pubDate>
+      
+      <guid>https://denm.ch/posts/relative-urls/</guid>
+      <description>The first key to really understanding relative URLs is to recognize that they refer to the current URL and do not reflect the actual folder structure on disk. The notation used is analogous to file navigation, but in this context you&amp;rsquo;re not traversing the physical structure: the browser constructs the new URL from the current URL value using a simple but surprisingly robust set of symbolic notation.
+Let&amp;rsquo;s take a look at a handy table, and then I&amp;rsquo;ll dig in.</description>
+    </item>
     
     <item>
       <title>A Letter From Den</title>

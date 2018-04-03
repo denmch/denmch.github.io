@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Den McHenry  | Bear&#39;s Big Day</title>
+    <title>Den McHenry  | Relative URLs Desmystified</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -22,20 +22,16 @@
 
     
 
-    <meta property="og:title" content="Bear&#39;s Big Day" />
-<meta property="og:description" content="Here&rsquo;s a new comic inspired by sketching with my son this past weekend." />
+    <meta property="og:title" content="Relative URLs Desmystified" />
+<meta property="og:description" content="Explaining the meaning of slashes and dots in various combinations" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://denm.ch/posts/bear/" />
+<meta property="og:url" content="https://denm.ch/posts/relative-urls/" />
 
 
 
-<meta property="article:published_time" content="2018-01-16T21:04:04-08:00"/>
+<meta property="article:published_time" content="2018-04-01T20:06:21-07:00"/>
 
-<meta property="article:modified_time" content="2018-01-16T21:04:04-08:00"/>
-
-
-
-
+<meta property="article:modified_time" content="2018-04-01T20:06:21-07:00"/>
 
 
 
@@ -43,28 +39,32 @@
 
 
 
-<meta itemprop="name" content="Bear&#39;s Big Day">
-<meta itemprop="description" content="Here&rsquo;s a new comic inspired by sketching with my son this past weekend.">
 
 
-<meta itemprop="datePublished" content="2018-01-16T21:04:04-08:00" />
-<meta itemprop="dateModified" content="2018-01-16T21:04:04-08:00" />
-<meta itemprop="wordCount" content="13">
+
+
+<meta itemprop="name" content="Relative URLs Desmystified">
+<meta itemprop="description" content="Explaining the meaning of slashes and dots in various combinations">
+
+
+<meta itemprop="datePublished" content="2018-04-01T20:06:21-07:00" />
+<meta itemprop="dateModified" content="2018-04-01T20:06:21-07:00" />
+<meta itemprop="wordCount" content="672">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Bear&#39;s Big Day"/>
-<meta name="twitter:description" content="Here&rsquo;s a new comic inspired by sketching with my son this past weekend."/>
+<meta name="twitter:title" content="Relative URLs Desmystified"/>
+<meta name="twitter:description" content="Explaining the meaning of slashes and dots in various combinations"/>
 
   </head>
 
   <body class="ma0 avenir bg-near-white">
 
-       
-<header class="cover bg-top" style="background-image: linear-gradient(rgba(50,0,100,.5), rgba(128,0,255,.5)), url('https://denm.ch/images/bear-panel-1.png'); background-position: center;">
-    <div class="pb3-m pb4-l bg-black-60">
+     
+<header>
+    <div class=" bg-black ">
         <nav class="pv3 ph3 ph4-ns" role="navigation">
     <div class="flex-l justify-between items-baseline center">
         <a href="https://denm.ch" class="f3 fw3 hover-white no-underline white-90 dib">
@@ -156,13 +156,14 @@
         </div>
     </div>
 </nav>
-        <div class="tc-l pv6 ph3 ph4-ns">
-            <h1 class="f2 f1-l fw4 white-90 mb0 lh-title">Bear&#39;s Big Day</h1>
-            
-            
-            <aside class="fw3 f3 white-80 measure-wide-l center lh-copy mt3 mb4">January 16, 2018</aside>
-            
-        </div>
+    </div>
+    <div class="tc-l pt5 ph3 ph4-ns">
+        <h1 class="f2 f1-l fw4 mb0 lh-title">Relative URLs Desmystified</h1>
+        
+        <h2 class="fw3 f5 f3-l measure-wide-l center lh-copy mt3 mb4">
+            Explaining the meaning of slashes and dots in various combinations
+        </h2>
+        
     </div>
 </header>
 
@@ -172,11 +173,109 @@
     <article class="center cf pv5 ph3 ph4-ns mw7">
         
         
-        <span class="near-black fw3">Tue, Jan 16, 2018</span>  
+        <span class="near-black fw3">Sun, Apr 1, 2018</span>  
         <div class="nested-copy-line-height lh-copy f4 nested-links nested-img dark-gray">
-             <p>Here&rsquo;s a new comic inspired by sketching with my son this past weekend.</p>
+             
 
-<p><img src="/images/bear.png" alt="A bear looks out the window and thinks it looks like a lovely day, but a bit windy. He tries to put on a hat and jacket, but the jacket is too small. He paces through the house, trying to figure out who's jacket it is, then realizes it isn't even his house. The final panel shows a severed human arm on the floor."></p>
+<p>The first key to really understanding relative URLs is to recognize that they refer to the current URL and do not reflect the actual folder structure on disk. The notation used is analogous to file navigation, but in this context you&rsquo;re not traversing the physical structure: the browser constructs the new URL from the current URL value using a simple but surprisingly robust set of symbolic notation.</p>
+
+<p>Let&rsquo;s take a look at a handy table, and then I&rsquo;ll dig in. There are exactly four distinct symbols with very precise meanings:</p>
+
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Notes</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td>Root</td>
+<td>up to base URL</td>
+</tr>
+
+<tr>
+<td><code>//</code></td>
+<td>Protocol</td>
+<td>to be avoided</td>
+</tr>
+
+<tr>
+<td><code>./</code></td>
+<td>Current dir.</td>
+<td>alias: no slash</td>
+</tr>
+
+<tr>
+<td><code>../</code></td>
+<td>Parent</td>
+<td>may be combined</td>
+</tr>
+</tbody>
+</table>
+
+<p>These symbols are composed of just slashes and dots, singly or in pairs. It may seem confusing at first, but the first three are constant and can not be combined. The last one, with two dots, can be combined, as we&rsquo;ll see below.</p>
+
+<h2 id="2-slash-or-not-2-slash">2 Slash or Not 2 Slash?</h2>
+
+<p>The simplest way to conceptualize the double slash and the single slash in relative URL notation is to recognize that the base URL is the kernel, and to think of the double slash and single slash as something like bookends. One separates the base URL from its protocol, and the other separates it from its subpages and directories:</p>
+
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>delimiter</th>
+<th>base url</th>
+<th>delimiter</th>
+<th>subpages, &amp;c.</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>https:</td>
+<td>//</td>
+<td>dev.to</td>
+<td>/</td>
+<td>denmch</td>
+</tr>
+</tbody>
+</table>
+
+<p>The double slash will tell the browser to build a URL from just before the base URL, going back to the protocol. The single slash by itself tells the browser to construct a URL from just after the base URL, at the level of subpages and directories.</p>
+
+<p>Given the URL <code>https://dev.to/denmch</code>, double slash (<code>//</code>) is shorthand for <code>https://</code> and single slash (<code>/</code>) is shorthand for <code>https://dev.to/</code>, quite literally telling the browser to begin at this or that distinct delimiter.</p>
+
+<h2 id="protocol-considered-harmful">Protocol Considered Harmful</h2>
+
+<p>You&rsquo;ve doubtless linked to or at least seen external resources without a stated protocol (<code>http:</code> or <code>https:</code>), using a url of the form <code>//path-to.my/script.js</code>.</p>
+
+<p>This seemed just dandy for awhile, but it&rsquo;s now <a href="https://www.paulirish.com/2010/the-protocol-relative-url/">considered an anti-pattern and potentially exposes vulnerabilities</a>. Even though it&rsquo;s probably best avoided, it&rsquo;s good to know why it works the way it does, and it helps us to gain a deeper understanding of how relative URL notation really works, especially since it&rsquo;s still found out there in the wild (even if we should avoid it).</p>
+
+<h2 id="dot-dot-s-my-father-s-name-call-me-dot">Dot Dot&rsquo;s my father&rsquo;s name; call me Dot</h2>
+
+<p>Whereas slashes by themselves refer to the bookends around the <strong>base URL</strong>, <em>single slashes in combination with dots</em> refer to the full <strong>current URL</strong> and move from right to left.</p>
+
+<p>Dot qualifiers tell the browser that <em>this</em> slash is <em>not</em> root. Semantically, a single dot followed by a slash (<code>./</code>) means &ldquo;start from the current directory.&rdquo; The <code>./</code> symbol will never be found in any other combination (e.g., <code>.././</code> would be invalid).</p>
+
+<p>A double dot followed by a slash means &ldquo;start one directory up,&rdquo; and this pattern can be compounded to traverse leftward in the current URL, so that <code>../</code> references the parent of the current directory and <code>../../</code> references the parent of the parent, and so on.</p>
+
+<p>If the relative URL references more &ldquo;generations&rdquo; than the current URL contains, the new resulting URL will start only as far back as it can: at the base URL:</p>
+
+<p>Given the URL <code>https://dev.to/denmch</code>, the following patterns all go back to the base URL (<code>https://dev.to</code>) because there are no parent directories to extrapolate from the current URL:</p>
+
+<ul>
+<li><code>../../../</code></li>
+<li><code>../../</code></li>
+<li><code>../</code></li>
+</ul>
+
+<p>The last important bit is to recognize that <code>./</code> has an alias: beginning a relative URL with neither dots nor slashes. Given the current URL <code>https://dev.to/</code>, a relative url of the form <code>href=&quot;denmch&quot;</code> would be functionally equivalent to <code>href=&quot;./denmch&quot;</code> and result in a final URL of <code>https://dev.to/denmch</code>.</p>
+
+<p>Now it&rsquo;s up to you do decide when and where it makes sense to use relative URLs, and hopefully you&rsquo;re better equipped to think it through and understand problems and potential problems as they arise.</p>
 
         </div>
     </article>
@@ -197,7 +296,7 @@
       
         <li class="list f5 w-100 hover-bg-white nl1">
           
-          <a href="/posts/relative-urls/" class="link ph2 pv2 db black">
+          <a href="/posts/relative-urls/" class="link ph2 pv2 db black o-50">
             Relative URLs Desmystified
           </a>
         </li>
@@ -232,7 +331,7 @@
       
         <li class="list f5 w-100 hover-bg-white nl1">
           
-          <a href="/posts/bear/" class="link ph2 pv2 db black o-50">
+          <a href="/posts/bear/" class="link ph2 pv2 db black">
             Bear&#39;s Big Day
           </a>
         </li>
