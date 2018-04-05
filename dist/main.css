@@ -6029,3 +6029,7 @@ table td {
     width: 1000px;
     box-sizing: border-box
 }
+
+.lh-copy {
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
